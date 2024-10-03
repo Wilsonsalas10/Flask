@@ -1,0 +1,29 @@
+<!-- divisas.html -->
+{% extends "base.html" %}
+
+{% block content %}
+
+   <h1>Calculadora Divisas</h1>
+   <p>Ingresa datos numericos..</p>
+   <form action="/divisas" method="POST">
+
+       <div class="row">
+           <div class="col-md-6">
+               <input type="number" class="form-control" name="divisas" placeholder="Ingresa el valor (COP)" aria-label="Ingresa el valor">
+           </div>
+       </div>
+       <div class="row py-3">
+           <div class="col-md-12">
+               <button type="submit" class="btn btn-primary">Calcular</button>
+           </div>
+       </div>
+   </form>
+
+   <div class="row py-2">
+       <div class="col">
+           <h3>La Cantidad en USD es: {{total_dolares}}</h3>
+           <h3>La Cantidad en EU es: {{total_euros}}</h3>
+           <h3>La Cantidad en Pesos(Mexicanos) son: {{total_pesosM}}</h3>
+       </div>
+   </div>
+{% endblock %}    
